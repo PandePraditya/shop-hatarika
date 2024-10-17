@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Sale</title>
+</head>
+
+<body>
+    <div id="appSale">
+        <header>
+            <!-- Navbar -->
+            <nav class="d-flex">
+                <h1 class="text-grey ms-20 title">Your <span class="text-brown">Shoes</span></h1>
+                <ul type="none" class="text-deco-none mt-20 d-flex justify-content-between ms-auto navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a>Collection</a>
+                        <ul type="none" class="dropdown-content">
+                            <li><a href="#">Sneakers</a></li>
+                            <li><a href="#">Slip On</a></li>
+                            <li><a href="#">Boots</a></li>
+                            <li><a href="#">Pantofel</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a>Brands</a>
+                        <ul type="none" class="dropdown-content">
+                            <li><a href="#">Adidas</a></li>
+                            <li><a href="#">Nike</a></li>
+                            <li><a href="#">Converse</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sale.html">Sale</a></li>
+                    <li class="add-cart" @click="openCart">Cart(4)</li>
+                </ul>
+            </nav>
+        </header>
+    
+        <main>
+            <div class="sale-container">
+                <h2>Product <span>Sale</span></h2>
+                <div class="sale-content">
+                    <div class="sale-card" v-for="(item, index) in productSale" :key="index">
+                        <div class="sale-img">
+                            <img :src="item.imgSrc" :alt="item.imgAlt">
+                        </div>
+                        <div class="sale-text">
+                            <button type="button" @click="openModal(item)">Detail</button>
+                            <h3>{{ item.name }}</h3>
+                            <p>{{ item.originalPrice }}</p>
+                            <p>Rp. {{ item.salePrice }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modal Detail -->
+        <div id="modalProduct" class="modal" v-if="showModal">
+            <div class="modal-content">
+                <div class="title-modal">
+                    <a href="#" class="fa-solid fa-xmark" @click="closeModal"></a>
+                    <h2>Detail Product</h2>
+                </div>
+                <div class="modal-body" v-if="selectProduct">
+                    <div class="modal-img">
+                        <img :src="selectProduct.imgSrc" :alt="selectProduct.imgAlt">
+                    </div>
+                    <div class="modal-desc">
+                        <h3>{{ selectProduct.name }}</h3>
+                        <p>{{ selectProduct.originalPrice }}</p>
+                        <p>Rp. {{ selectProduct.salePrice }}</p>
+                        <div class="size-sale">
+                            <label for="size">Chooses Size</label>
+                            <select name="size" id="size" v-model="selectSize">
+                                <option v-for="size in sizes" :key="size" :value="size">{{ size }}</option>
+                            </select>
+                        </div>
+                        <div class="quantity-sale">
+                            <label for="qty">Quantity</label>
+                            <button v-on:click="qty_plus" id="qty_plus">+</button>
+                            <input type="text" name="qty" id="qty" v-model="qty" v-on:keyup.up="qty_plus" v-on:keyup.down="qty_minus" v-on:keyup.enter="buyNow">
+                            <button v-on:click="qty_minus" id="qty_minus">-</button>
+                        </div>
+                        <div class="custom-size">
+                            <p>If you can not find your sizes, please kindly input here!</p>
+                            <label for="custom-size">Secial Request</label>
+                            <input type="text" name="custom-size" id="custom-size" v-model="customSize" placeholder="e.g EUR 43">
+                        </div>
+                        <div class="packaging">
+                            <label for="packaging">Packaging</label>
+                            <span v-for="packaging in packagings" :key="packaging"><input type="radio" name="packaging" id="packaging1" :value="packaging" v-model="selectPackage">{{ packaging }}</span>
+                        </div>
+                        <div class="sale-btn">
+                            <button type="button" @click="addToCart()">Add To Cart</button>
+                            <button type="button" @click="buyNow()">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-desc-product">
+                    <h3>Description</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae quos tempora repellendus explicabo natus doloremque nulla eligendi provident tempore soluta, sint in! Facilis molestiae eligendi non nulla culpa corrupti?
+                    Minus vero totam voluptate eius laudantium consequatur error aperiam saepe quisquam rem laboriosam, ut deserunt earum optio alias debitis, exercitationem ea labore? Inventore fuga ad earum ipsa quae sequi neque?
+                    Ullam, cupiditate! Alias, ex totam qui cupiditate accusantium in minus sint, unde quaerat autem quidem harum aperiam provident aspernatur, error veniam delectus beatae cumque. Suscipit est aliquid velit enim harum!
+                    Possimus, magni quisquam! Nostrum ullam dolore et consequatur veritatis odit iure deserunt officiis ea? Recusandae perspiciatis fuga corrupti ducimus quisquam nobis culpa, iste voluptatum, quas sapiente sequi aspernatur, quaerat distinctio!</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="spesification">
+                        <h4>Spesification</h4>
+                        <ul>
+                            <li v-for="specification in specifications">{{ specification }}</li>
+                        </ul>
+                    </div>
+                    <div class="size-charts">
+                        <h4>Size Chart</h4>
+                        <ul>
+                            <li v-for="sizeChart in sizeCharts">{{ sizeChart }}></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Cart -->
+        <div id="modalCart" class="modal" v-if="showCart">
+            <div class="modal-content">
+                <div class="title-modal">
+                    <a href="#" class="fa-solid fa-xmark" @click="closeCart"></a>
+                </div>
+                <div class="cart-items">
+                    <div class="empty-cart" v-if="cart.length === 0">
+                        <h2>Your Cart is Empty. . . .</h2>
+                    </div>
+                    <div v-else class="cart-body">
+                        <h2>Detail Produk</h2>
+                        <ul type="none">
+                            <li class="cart-product" v-for="(item, index) in cart" :key="index">
+                                <div class="d-flex">
+                                    <img :src="item.imgSrc" :alt="item.imgAlt">
+                                    <div class="cart-text">
+                                        <h3>{{ item.name }}</h3>
+                                        <div class="d-inline-p">
+                                            <p>Size : {{ item.size }}</p>
+                                            <p>Jumlah : {{ item.qty }}</p>
+                                        </div>
+                                        <div class="d-inline-p">
+                                            <p>Packaging : {{ item.packaging }}</p>
+                                            <p>Info : {{ item.info }}</p>
+                                        </div>
+                                        <p style="color: #d65a31; font-weight: bold; font-size: 20px;">Rp. {{ item.salePrice }}</p>
+                                    </div>
+                                </div>
+                                <div class="cart-btn">
+                                    <button type="button" @click="clearCart()">Clear Cart</button>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="total-cart">
+                            <h3>Total : Rp. {{ totalPrice }}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="d-flex justify-content-between">
+            <ul type="none">
+                <h3 class="text-brown">Hatarika</h3>
+                <li>Hatarika</li>
+                <li>Jl. Sudirman No.xx</li>
+                <li>hatarik@gmail.com</li>
+                <li>(021) 2552-xxxx</li>
+            </ul>
+            <ul type="none">
+                <h3 class="text-brown">Hatarika</h3>
+                <li>Sneakers</li>
+                <li>Slip On</li>
+                <li>Boots</li>
+                <li>Pantofel</li>
+            </ul>
+            <div class="mt-15">
+                <h3 class="text-brown">Follow us on</h3>
+                <img src="images/icon/ic-twitter.png" alt="Twitter">
+                <img src="images/icon/ic-facebook.png" alt="Twitter">
+                <img src="images/icon/ic-instagram.png" alt="Twitter">
+                <img src="images/icon/ic-pinterest.png" alt="Twitter">
+            </div>
+        </div>
+        <p class="text-center text-grey">Copyright &copy; 2021 Hatarika.co All Rights Reserve</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/1da9c5ed2d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

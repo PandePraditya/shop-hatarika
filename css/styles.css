@@ -1,0 +1,681 @@
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    background: white url("../images/index/shoes-line.png") repeat-y left;
+    background-size: 60px;
+    background-color: #393e46;
+    padding: 50px 50px 10px 50px; 
+    color: white;
+}
+
+footer li {
+    margin-bottom: 10px;
+}
+
+footer li:hover {
+    color: #d65a31;
+    cursor: pointer;
+}
+
+#bg-img {
+    background: white url("../images/index/brown_shoes.jpeg") no-repeat center;
+    background-size: cover;
+}
+
+#bg-login {
+    background-color: #d65a31;
+    border-radius: 20px;
+}
+
+#bg-login:hover {
+    background-color: black;
+    color: #d65a31;
+}
+
+.title {
+    padding: 10px 15px;
+}
+
+/* Navbar */
+.navbar a{
+    text-decoration: none;
+    color: black;
+}
+.navbar li {
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Table */
+.bg-table {
+    background-image: url("../images/index/shoes-line.png");
+    background-repeat: repeat;
+    background-size: 100px;
+    padding: 20px;
+}
+
+/* Button detail */
+.btn-detail button {
+    background-color: black;
+    margin-top: -20px;
+    position: relative;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border: 0px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+.btn-detail button:hover {
+    background-color: white;
+    color: #d65a31;
+    cursor: pointer;
+}
+
+/* Image vorder radius */
+.img-border-radius img{
+    border: black 1px solid;
+    border-radius: 20px;
+}
+
+/* Detail products */
+.detail-product {
+    margin: 0px 20px;
+}
+.detail-product li {
+    margin: 0px 0px 10px -40px;
+}
+.detail-product select {
+    font-size: 20px;
+}
+.detail-product div {
+    margin: 0px 0px 30px 0px;
+}
+
+/* Input size */
+.input-size input {
+    font-size: 20px;
+}
+
+/* Button cart */
+.btn-cart {
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.btn-cart:hover {
+    background-color: #eeeeee;
+    color: black;
+    cursor: pointer;
+}
+
+/* Related Product */
+.related-product button {
+    background-color: black;
+    margin-top: -10px;
+    color: white;
+    width: 100px;
+    height: 50px;
+    border: 0px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.related-product button:hover {
+    background-color: white;
+    color: #d65a31;
+    cursor: pointer;
+}
+.related-product p {
+    font-size: 18px;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.d-inline-p {
+    margin: 20px 0px;
+}   
+
+.d-inline-p p {
+    display: inline;
+}
+
+.d-block {
+    display: block;
+}
+
+.dlex-wrap {
+    flex-wrap: wrap;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-grey {
+    color: grey;
+}
+
+.text-brown {
+    color: #d65a31;
+}
+
+.text-deco-none {
+    text-decoration: none;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+
+.w-300 {
+    width: 300px;
+}
+
+.w-400 {
+    width: 400px;
+}
+
+.w-500 {
+    width: 500px;
+}
+
+.w-700 {
+    width: 700px;
+}
+
+.max-w-80 {
+    max-width: 80%;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.m-50 {
+    margin: 50px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mt-20 {
+    margin-top: 25px;
+}
+
+.ms-33 {
+    margin-left: 33px;
+}
+
+.ms-40 {
+    margin-left: 2.5em;
+}
+
+.ms-auto {
+    margin-left: auto;
+}
+
+.ms-20 {
+    margin-left: 20px;
+}
+
+.pt-20 {
+    padding-top: 10em;
+}
+
+.pt-100 {
+    padding-top: 100px;
+}
+
+.p-10em {
+    padding: 15em;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.py-20 {
+    padding: 20px 0px;
+}
+
+.px-40 {
+    padding: 0px 40px;
+}
+
+.p-30-50 {
+    padding: 30px 50px;
+}
+
+.p-20-50 {
+    padding: 20px 50px;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.border-20 {
+    border-radius: 20px;
+}
+
+.add-cart {
+    background-color: #d65a31;
+    border-radius: 25px;
+}
+
+.add-cart:hover {
+    background-color: black;
+    color: #d65a31;
+    cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+}
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin-left: -65px;
+    width: 155px;
+    color: black;
+}
+.dropdown-content a:hover {
+    background-color: black;
+    color: #d65a31;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    width: 150px;
+}
+
+/* Sale Page Start */
+.sale-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.sale-container h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.sale-container h2 span {
+    color: #d65a31;
+}
+
+.sale-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+    width: 75%;
+}
+
+.sale-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    height: 400px;
+}
+
+.sale-img img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.sale-text button {
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 50px;
+    margin-top: -20px;
+    border: 0px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+.sale-text button:hover {
+    background-color: #eeeeee;
+    color: black;
+    cursor: pointer;
+}
+
+.sale-text p:nth-child(3) {
+    font-size: 16px;
+    text-decoration: line-through;
+    color: grey;
+}
+
+.sale-text p:nth-child(4) {
+    font-size: 20px;
+}
+/* Sale Page End */
+
+/* Modal Detail Start */
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 3% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 20px;
+    width: 70%;
+    height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Scrollbar */
+.modal-content::-webkit-scrollbar {
+    width: 8px; 
+}
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0); 
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0); 
+}
+
+.title-modal {
+    width: 100%;
+    padding: 10px;
+}
+
+.title-modal a {
+    float: right;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: -10px;
+    margin-right: 10px;
+    color: black;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 40px;
+}
+
+.modal-img img {
+    width: 300px;
+    border-radius: 15px;
+}
+
+.modal-desc {
+    width: 50%;
+}
+
+.modal-desc h3, label {
+    color: #d65a31;
+}
+
+.modal-desc p:nth-child(2) {
+    font-size: 16px;
+    text-decoration: line-through;
+    color: grey;
+}
+
+.modal-desc p:nth-child(3) {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.size-sale, .quantity-sale {
+    margin: 20px 0px;
+}
+
+.size-sale select {
+    border: #393e46 solid 1px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.quantity-sale input {
+    border: #393e46 solid 1px;
+    border-radius: 5px;
+    text-align: center;
+    width: 25px;
+}
+
+.quantity-sale button:nth-child(2) {
+    border: green solid 1px;
+    border-radius: 5px;
+    background-color: limegreen;
+    color: white;
+    font-weight: bold;
+    width: 22px;
+    cursor: pointer;
+}
+
+.quantity-sale button:nth-child(4) {
+    border: rgb(214, 0, 0) solid 1px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    width: 22px;
+    cursor: pointer;
+}
+
+.custom-size {
+    margin: 30px 0px;
+}
+
+.custom-size label {
+    margin-right: 10px;
+}
+
+.custom-size input {
+    padding: 5px 10px;
+    border: #393e46 solid 1px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.packaging {
+    padding: 10px 0px;
+    border-bottom: #393e46 solid 1px;
+}
+
+.packaging label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.packaging span {
+    margin-right: 20px;
+}
+
+.sale-btn {
+    margin: 10px 0px;
+}
+
+.sale-btn button {
+    margin-right: 10px;
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.sale-btn button:hover {
+    background-color: #eeeeee;
+    color: black;
+    cursor: pointer;
+}
+
+.modal-desc-product, .modal-footer {
+    padding: 0px 20px;
+}
+
+.modal-footer {
+    display: flex;
+    align-items: center;
+}
+
+.modal-footer li {
+    margin: 10px 0px;
+}
+
+.size-charts {
+    margin-left: 10em;
+}
+/* Modal Detail End */
+
+
+/* Modal Cart Start */
+.cart-product {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.cart-product img {
+    width: 200px;
+}
+
+.cart-text {
+    margin-left: 40px;
+}
+
+.cart-product p {
+    margin-right: 20px;
+}
+
+.cart-btn {
+    margin-right: 30px;
+}
+
+.cart-btn button {
+    border: #393e46 solid 1px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.cart-btn button:hover {
+    background-color: white;
+    color: black;
+}
+
+.total-cart {
+    float: right;
+}
+/* Modal Cart End */
+
+@media screen and (max-width: 768px) { 
+    #bg-img {
+        background: white url("../images/index/brown_shoes.jpeg") no-repeat center;
+        background-size: 850px;
+    }
+
+    .w-md-180 {
+        width: 180px;
+    }
+
+    .w-md-200 {
+        width: 200px;
+    }
+
+    .w-md-300 {
+        width: 300px;
+    }
+
+    /* Detail Product */
+    .detail-product select {
+        font-size: 16px;
+    }
+    .detail-product input[type="text"] {
+        font-size: 16px;
+    }
+    .detail-product-radio {
+        font-size: 15px;
+    }
+
+    .btn-detail button {
+        width: 100px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 576px) { 
+    .w-sm-300 {
+        width: 300px;
+    }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="d-flex">
+            <h1 class="text-grey ms-20 title">Your <span class="text-brown">Shoes</span></h1>
+            <ul type="none" class="text-deco-none mt-20 d-flex ms-auto navbar">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a>Collection</a>
+                    <ul type="none" class="dropdown-content">
+                        <li><a href="#">Sneakers</a></li>
+                        <li><a href="#">Slip On</a></li>
+                        <li><a href="#">Boots</a></li>
+                        <li><a href="#">Pantofel</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a>Brands</a>
+                    <ul type="none" class="dropdown-content">
+                        <li><a href="#">Adidas</a></li>
+                        <li><a href="#">Nike</a></li>
+                        <li><a href="#">Converse</a></li>
+                    </ul>
+                </li>
+                <li><a href="sale.html">Sale</a></li>
+                <li id="bg-login">Log in</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Content -->
+        <h1 class="ms-33">Detail Produk</h1>
+        <div class="d-flex py-20 px-40">
+            <div class="p-20">
+                <img src="images/product/detail-produk.jpeg" alt="Produk" class="w-500 w-md-300">
+            </div>
+            <div class="detail-product">
+                <div class="max-w-80 text-justify">
+                    <h2 class="text-brown">White Sneakers</h2>
+                    <h2>Rp. 599.000</h2>
+                    <i>Make your days more simply with Hatarika's sneakers Hatarika proudly presents Hatarika's Sneakers Edition. Made with a combination of twill fabric upper and white-colored rubber, each pair gives the impression of shoes that have been lovingly kept and long unused. Express your simply style everyday with 5 different choice of colors Wear the sneakers to support your mood today, tomorrow and forever.</i>
+                </div>
+                <div>
+                    <h3 class="text-brown">Spesification</h3>
+                    <ul>
+                        <li>10 Oz canvas upper material</li>
+                        <li>Canvas lining material</li>
+                        <li>Polyester flat laces</li>
+                        <li>Rubber foxing and outsole</li>
+                        <li>Custom woven label</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-brown">Size Chart</h3>
+                    <select name="size" id="size">
+                        <option value="1">US 5 / UK 4 / EUR 36 / JP 24</option>
+                        <option value="2">US 6.5 / UK 5.5 / EUR 38 / JP 24</option>
+                        <option value="3">US 7 / UK 6 / EUR 39 / JP 25.8</option>
+                        <option value="4">US 8 / UK 7 / EUR 40 / JP 26</option>
+                        <option value="5">US 8 / UK 7 / EUR 41 / JP 26.3</option>
+                        <option value="6">US 11 / UK 10.5 / EUR 45 / JP 29.5</option>
+                    </select>
+                    <p>If you cannot find your sizes, please kindly input here!</p>
+                    <label class="input-size"> 
+                        Special Request
+                        <input type="text" placeholder="e.g EUR 43"> 
+                    </label>
+                </div>
+                <div class="detail-product-radio">
+                    <h3 class="text-brown">Packaging</h3>
+                    <label>
+                        <input type="radio" name="packaging" id="packaging1" checked> Normal
+                    </label>
+                    <label>
+                        <input type="radio" name="packaging" id="packaging2"> Bubble Wrap
+                    </label>
+                    <label>
+                        <input type="radio" name="packaging" id="packaging3"> Kotak Kayu
+                    </label>
+                    <hr>
+                    <button type="button" class="btn-cart">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Product -->
+        <h2 class="ms-33">Related Product</h2>
+        <div class="d-flex flex-wrap justify-content-between text-center py-20 px-40 related-product">
+            <div>
+                <img src="images/product/Black-Canvas.jpg" alt="Black Canvas" class="w-300 w-md-200 d-block">
+                <button type="button" class="relative">Detail</button>
+                <h3>Black Canvas</h3>
+                <p>Rp. 500.000</p>
+            </div>
+            <div>
+                <img src="images/product/Leather-Shoes.jpg" alt="Black Canvas" class="w-300 w-md-200 d-block">
+                <button type="button" class="relative">Detail</button>
+                <h3>Leather Shoes</h3>
+                <p>Rp. 2.000.000</p>
+            </div>
+            <div>
+                <img src="images/product/Red-Canvas.jpg" alt="Black Canvas" class="w-300 w-md-200 d-block">
+                <button type="button" class="relative">Detail</button>
+                <h3>Red Canvas</h3>
+                <p>Rp. 499.000</p>
+            </div>
+            <div>
+                <img src="images/product/Red-Canvas.jpg" alt="Black Canvas" class="w-300 w-md-200 d-block">
+                <button type="button" class="relative">Detail</button>
+                <h3>Red Canvas</h3>
+                <p>Rp. 499.000</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="d-flex justify-content-between">
+            <ul type="none">
+                <h3 class="text-brown">Hatarika</h3>
+                <li>Hatarika</li>
+                <li>Jl. Sudirman No.xx</li>
+                <li>hatarik@gmail.com</li>    
+                <li>(021) 2552-xxxx</li>    
+            </ul>
+            <ul type="none">
+                <h3 class="text-brown">Hatarika</h3>
+                <li>Sneakers</li>
+                <li>Slip On</li>
+                <li>Boots</li>    
+                <li>Pantofel</li>    
+            </ul>
+            <div class="mt-15">
+                <h3 class="text-brown">Follow us on</h3>
+                <img src="images/icon/ic-twitter.png" alt="Twitter">
+                <img src="images/icon/ic-facebook.png" alt="Twitter">
+                <img src="images/icon/ic-instagram.png" alt="Twitter">    
+                <img src="images/icon/ic-pinterest.png" alt="Twitter">    
+            </div>
+        </div>
+        <p class="text-center text-grey">Copyright &copy; 2021 Hatarika.co All Rights Reserve</p>
+    </footer>
+</body>
+</html>
